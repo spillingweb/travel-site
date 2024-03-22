@@ -1,29 +1,24 @@
-# Numerous always-ignore extensions
-*.diff
-*.err
-*.orig
+# Logs
+logs
 *.log
-*.rej
-*.swo
-*.swp
-*.vi
-*~
-*.sass-cache
-node_modules/
-.tmp/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# OS or Editor folders
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-Thumbs.db
-.cache
-.project
-.settings
-.tmproj
-*.esproj
-nbproject
-*.sublime-project
-*.sublime-workspace
-*.komodoproject
-.komodotools
-_notes
-dwsync.xml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
