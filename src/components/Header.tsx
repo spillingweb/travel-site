@@ -1,6 +1,7 @@
 import classes from "./Header.module.css";
 import headerIcon from "../assets/images/icons/clear-view-escapes.svg";
 import heroImg from "../assets/images/hero--large.jpg";
+import { Router } from "react-router-dom";
 
 const Header: React.FC = () => {
   return (
