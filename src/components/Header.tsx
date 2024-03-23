@@ -1,7 +1,6 @@
-import classes from "./Header.module.css";
+import "./Header.css";
 import headerIcon from "../assets/images/icons/clear-view-escapes.svg";
 import heroImg from "../assets/images/hero--large.jpg";
-import { Router } from "react-router-dom";
 
 const Header: React.FC = () => {
   return (
@@ -24,8 +23,8 @@ const Header: React.FC = () => {
         </nav>
       </header>
 
-      <div className={classes.largeHero}>
-        <img src={heroImg} />
+      <div className="large-hero">
+        <img src={heroImg} alt="Landscape" />
         <h1>Your clarity.</h1>
         <h2>One trip away.</h2>
         <p>We create soul restoring journeys that inspire you to be you.</p>
