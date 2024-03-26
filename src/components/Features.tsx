@@ -4,18 +4,20 @@ import starImg from "../assets/images/icons/star.svg";
 
 const Features: React.FC = () => {
   return (
-    <div id="features">
-      <img src={starImg} />
-      <h2>Our Features</h2>
+    <div id="features" className="page-section page-section--blue">
+      <div className="wrapper">
+        <img src={starImg} />
+        <h2>Our Features</h2>
 
-      {DUMMY_FEATURES.map((feature) => (
-        <FeatureItem
-          key={feature.id}
-          img={feature.img}
-          title={feature.title}
-          text={feature.text}
-        />
-      ))}
+        {DUMMY_FEATURES.map((feature) => (
+          <FeatureItem
+            key={feature.id}
+            img={feature.img}
+            title={feature.title}
+            text={feature.text}
+          />
+        ))}
+      </div>
     </div>
   );
 };

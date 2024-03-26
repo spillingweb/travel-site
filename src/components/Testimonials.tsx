@@ -1,10 +1,11 @@
 import TestimonialItem from "./TestimonialItem";
 import { DUMMY_TESTIMONIALS } from "../testimonials";
+import commentImg from "../assets/images/icons/comment.svg";
 
 const Testimonials: React.FC = () => {
   return (
     <div id="testimonials">
-      <img src="assets/images/icons/comment.svg" />
+      <img src={commentImg} />
       <h2>Real Testimonials</h2>
       {DUMMY_TESTIMONIALS.map((item) => (
         <TestimonialItem
