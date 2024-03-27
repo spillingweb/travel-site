@@ -15,14 +15,14 @@ export interface imgProps {
 }
 
 // Large Hero image
-import heroLarge from "./assets/images/hero--large-i.jpg";
-import heroLargeHiDpi from "./assets/images/hero--large-hi-dpi-i.jpg";
-import heroMedium from "./assets/images/hero--medium-i.jpg";
-import heroMediumHiDpi from "./assets/images/hero--medium-hi-dpi-i.jpg";
-import heroSmall from "./assets/images/hero--small-i.jpg";
-import heroSmallHiDpi from "./assets/images/hero--small-hi-dpi-i.jpg";
-import heroSmaller from "./assets/images/hero--smaller-i.jpg";
-import heroSmallerHiDpi from "./assets/images/hero--smaller-hi-dpi-i.jpg";
+import heroLarge from "./assets/images/hero--large.jpg";
+import heroLargeHiDpi from "./assets/images/hero--large-hi-dpi.jpg";
+import heroMedium from "./assets/images/hero--medium.jpg";
+import heroMediumHiDpi from "./assets/images/hero--medium-hi-dpi.jpg";
+import heroSmall from "./assets/images/hero--small.jpg";
+import heroSmallHiDpi from "./assets/images/hero--small-hi-dpi.jpg";
+import heroSmaller from "./assets/images/hero--smaller.jpg";
+import heroSmallerHiDpi from "./assets/images/hero--smaller-hi-dpi.jpg";
 
 export const heroImgProps: imgProps = {
   alt: "Costal landscape",
@@ -59,9 +59,9 @@ export const heroImgProps: imgProps = {
 };
 
 // First trip image
-import firstTrip from "./assets/images/first-trip-i.jpg";
-import firstTripHiDpi from "./assets/images/first-trip-hi-dpi-i.jpg";
-import firstTripLowRes from "./assets/images/first-trip-low-res-i.jpg";
+import firstTrip from "./assets/images/first-trip.jpg";
+import firstTripHiDpi from "./assets/images/first-trip-hi-dpi.jpg";
+import firstTripLowRes from "./assets/images/first-trip-low-res.jpg";
 
 export const firstTripProps: imgProps = {
   alt: "Couple walking down a street",
@@ -80,12 +80,12 @@ export const firstTripProps: imgProps = {
 };
 
 // Our Start image
-import ourStart from "./assets/images/our-start-i.jpg";
-import ourStartHiDpi from "./assets/images/our-start-hi-dpi-i.jpg";
-import ourStartPortrait from "./assets/images/our-start-portrait-i.jpg";
-import ourStartPortraitHiDpi from "./assets/images/our-start-portrait-hi-dpi-i.jpg";
-import ourStartLandscape from "./assets/images/our-start-landscape-i.jpg";
-import ourStartLandscapeHiDpi from "./assets/images/our-start-landscape-hi-dpi-i.jpg";
+import ourStart from "./assets/images/our-start.jpg";
+import ourStartHiDpi from "./assets/images/our-start-hi-dpi.jpg";
+import ourStartPortrait from "./assets/images/our-start-portrait.jpg";
+import ourStartPortraitHiDpi from "./assets/images/our-start-portrait-hi-dpi.jpg";
+import ourStartLandscape from "./assets/images/our-start-landscape.jpg";
+import ourStartLandscapeHiDpi from "./assets/images/our-start-landscape-hi-dpi.jpg";
 
 export const ourStartProps: imgProps = {
   alt: "Our founder, Jane Doe",
