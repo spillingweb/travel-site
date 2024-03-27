@@ -1,8 +1,8 @@
-import { sourceProp } from "../../images";
+import { imgProp } from "../../images";
 
-const Source: React.FC<{ sourceArray: sourceProp[] }> = ({ sourceArray }) => {
+const Source: React.FC<{ sourceArray: imgProp[] }> = ({ sourceArray }) => {
   
-    function makeSrcSet(source: sourceProp) {
+    function makeSrcSet(source: imgProp) {
     return `${source.url} ${source.width}w, ${source.urlHiDpi} ${source.width * 2}`;
   }
 

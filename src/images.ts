@@ -1,20 +1,17 @@
 export interface imgProp {
+  name?: string;
   url: any;
   urlHiDpi?: any;
   width: number;
-}
-
-export interface sourceProp extends imgProp {
-  name: string;
-  media: number;
   sizes?: number;
+  media?: number;
 }
 
 export interface imgProps {
   alt: string;
   smaller: imgProp;
   lowRes?: imgProp;
-  source?: sourceProp[];
+  source?: imgProp[];
 }
 
 // Large Hero image
@@ -73,6 +70,7 @@ export const firstTripProps: imgProps = {
     url: firstTrip,
     urlHiDpi: firstTripHiDpi,
     width: 976,
+    sizes: 976
   },
 
   lowRes: {
