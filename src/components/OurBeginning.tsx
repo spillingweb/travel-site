@@ -1,25 +1,35 @@
-import firstTripImg from "../assets/images/first-trip.jpg";
-import ourStartImg from "../assets/images/our-start.jpg";
+import { ourStartProps, firstTripProps } from "../images";
+import Image from "./UI/Image";
+import Row from "./UI/Row";
+import Source from "./UI/Source";
+import Wrapper from "./UI/Wrapper";
 
-const About: React.FC = () => {
+const OurBeginning: React.FC = () => {
   return (
     <div id="our-beginning" className="page-section">
-      <div className="wrapper">
+      <Wrapper>
         <h2 className="headline headline--centered headline--light headline--b-margin-small">
           The first trip we planned<strong> was our own.</strong>
         </h2>
+
         <h3 className="headline headline--centered headline--orange headline--small headline--narrow headline--light headline--b-margin-large">
           Ever since, we&rsquo;ve been working to make travel
           <strong> better for everyone.</strong>
         </h3>
-        <div className="wrapper wrapper--medium">
-          <img src={firstTripImg} alt="Couple walking down a street." />
-        </div>
-        <div className="row">
-          <div className="row__4">
-            <img src={ourStartImg} alt="Our founder, Jane Doe" />
+
+        <Wrapper className="wrapper--medium wrapper--b-margin">
+          <Image imgProps={firstTripProps} />
+        </Wrapper>
+
+        <Row className="row--gutters">
+          <div className="row__medium-4 row__medium-4--larger">
+            <picture>
+              <Source sourceArray={ourStartProps.source!} />
+              <Image imgProps={ourStartProps} />
+            </picture>
           </div>
-          <div className="row__8">
+
+          <div className="row__medium-8 row__medium-8--smaller">
             <h2 className="headline">
               Here&rsquo;s how we got started&hellip;
             </h2>
@@ -49,10 +59,10 @@ const About: React.FC = () => {
               <strong>dolore eu fugiat.</strong>
             </p>
           </div>
-        </div>
-      </div>
+        </Row>
+      </Wrapper>
     </div>
   );
 };
 
-export default About;
+export default OurBeginning;

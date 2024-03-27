@@ -1,4 +1,4 @@
-import About from "./components/About";
+import OurBeginning from "./components/OurBeginning";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -8,7 +8,7 @@ export const App = () => {
   return (
     <>
       <Header />
-      <About />
+      <OurBeginning />
       <Features />
       <Testimonials />
       <Footer />
