@@ -1,12 +1,12 @@
-const FeatureItem: React.FC<{ img: string; title: string; text: string }> = (
-  props
-) => {
+const FeatureItem: React.FC<{
+  feature: { img: any; text: string; title: string };
+}> = ({ feature }) => {
   return (
-    <>
-      <img src={props.img} />
-      <h3>{props.title}</h3>
-      <p>{props.text}</p>
-    </>
+    <div className="feature-item">
+      <img className="feature-item__icon" src={feature.img} />
+      <h3 className="feature-item__title">{feature.title}</h3>
+      <p>{feature.text}</p>
+    </div>
   );
 };
 
