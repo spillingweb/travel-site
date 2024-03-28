@@ -1,16 +1,23 @@
 const TestimonialItem: React.FC<{
-  img: string;
-  name: string;
-  subtitle: string;
-  text: string;
-}> = (props) => {
+  testimonial: {
+    img: string;
+    name: string;
+    subtitle: string;
+    text: string;
+  };
+  isLast: boolean;
+}> = ({ testimonial, isLast }) => {
   return (
-    <>
-      <img src={props.img} />
-      <h3>{props.name}</h3>
-      <h3>{props.subtitle}</h3>
-      <p>&ldquo;{props.text}&rdquo;</p>
-    </>
+    <div className="row__medium-4">
+      <div className={`testimonial-item ${isLast ? 'testimonial-item--last' : ''}`}>
+        <div className="testimonial-item__photo">
+          <img src={testimonial.img} />
+        </div>
+        <h3 className="testimonial-item__title">{testimonial.name}</h3>
+        <h4 className="testimonial-item__subtitle">{testimonial.subtitle}</h4>
+        <p>&ldquo;{testimonial.text}&rdquo;</p>
+      </div>
+    </div>
   );
 };
 
