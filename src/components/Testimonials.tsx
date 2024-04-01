@@ -7,7 +7,7 @@ import Row from "./UI/Row";
 const Testimonials: React.FC = () => {
   return (
     <div id="testimonials" className="page-section page-section--testimonials">
-      <Wrapper className="wrapper--no-padding-until-large">
+      <Wrapper className="wrapper--no-padding-until-medium">
         <h2 className="section-title section-title--blue">
           <img className="section-title__icon" src={commentImg} />
           Real <strong>Testimonials</strong>
