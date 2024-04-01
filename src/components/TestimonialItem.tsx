@@ -1,6 +1,9 @@
+import { imgProps } from "../images";
+import Image from "./UI/Image";
+
 const TestimonialItem: React.FC<{
   testimonial: {
-    img: string;
+    img: imgProps;
     name: string;
     subtitle: string;
     text: string;
@@ -8,10 +11,10 @@ const TestimonialItem: React.FC<{
   isLast: boolean;
 }> = ({ testimonial, isLast }) => {
   return (
-    <div className="row__medium-4">
+    <div className="row__large-4">
       <div className={`testimonial-item ${isLast ? 'testimonial-item--last' : ''}`}>
         <div className="testimonial-item__photo">
-          <img src={testimonial.img} />
+          <Image imgProps={testimonial.img} />
         </div>
         <h3 className="testimonial-item__title">{testimonial.name}</h3>
         <h4 className="testimonial-item__subtitle">{testimonial.subtitle}</h4>

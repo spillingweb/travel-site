@@ -3,7 +3,7 @@ export interface imgProp {
   url: any;
   urlHiDpi?: any;
   width: number;
-  sizes?: number;
+  sizes?: string;
   media?: number;
 }
 
@@ -62,6 +62,7 @@ export const heroImgProps: imgProps = {
 import firstTrip from "./assets/images/first-trip.jpg";
 import firstTripHiDpi from "./assets/images/first-trip-hi-dpi.jpg";
 import firstTripLowRes from "./assets/images/first-trip-low-res.jpg";
+const coupleWidth = 976;
 
 export const firstTripProps: imgProps = {
   alt: "Couple walking down a street",
@@ -69,8 +70,8 @@ export const firstTripProps: imgProps = {
   smaller: {
     url: firstTrip,
     urlHiDpi: firstTripHiDpi,
-    width: 976,
-    sizes: 976
+    width: coupleWidth,
+    sizes: `(min-width: ${coupleWidth}px) ${coupleWidth}px, 100vw`,
   },
 
   lowRes: {
@@ -102,7 +103,7 @@ export const ourStartProps: imgProps = {
       url: ourStart,
       urlHiDpi: ourStartHiDpi,
       width: 404,
-      sizes: 404,
+      sizes: "404px",
       media: 1020,
     },
     {
@@ -110,8 +111,48 @@ export const ourStartProps: imgProps = {
       url: ourStartPortrait,
       urlHiDpi: ourStartPortraitHiDpi,
       width: 382,
-      sizes: 320,
+      sizes: "320px",
       media: 800,
     },
   ],
+};
+
+// Testimonials
+import janeImg from "./assets/images/testimonial-jane.jpg";
+import janeImgHiDpi from "./assets/images/testimonial-jane-hi-dpi.jpg";
+import johnImg from "./assets/images/testimonial-john.jpg";
+import johnImgHiDpi from "./assets/images/testimonial-john-hi-dpi.jpg";
+import catImg from "./assets/images/testimonial-cat.jpg";
+import catImgHiDpi from "./assets/images/testimonial-cat-hi-dpi.jpg";
+
+const testWidth = 160;
+
+export const testJaneProps: imgProps = {
+  alt: "Jane Doe",
+  smaller: {
+    url: janeImg,
+    urlHiDpi: janeImgHiDpi,
+    width: testWidth,
+    sizes: `${testWidth}px`,
+  },
+};
+
+export const testJohnProps: imgProps = {
+  alt: "John Smith",
+  smaller: {
+    url: johnImg,
+    urlHiDpi: johnImgHiDpi,
+    width: testWidth,
+    sizes: `${testWidth}px`,
+  },
+};
+
+export const testCatProps: imgProps = {
+  alt: "Cat  McKitty",
+  smaller: {
+    url: catImg,
+    urlHiDpi: catImgHiDpi,
+    width: testWidth,
+    sizes: `${testWidth}px`,
+  },
 };

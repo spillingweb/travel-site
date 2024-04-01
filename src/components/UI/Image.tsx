@@ -13,7 +13,7 @@ const Image: React.FC<{ imgProps: imgProps; className?: string }> = (props) => {
 
   return (
     <img
-      sizes={image.sizes ? `(min-width: ${image.sizes}px) ${image.sizes}px, 100vw` : undefined}
+      sizes={image.sizes ? image.sizes : undefined}
       srcSet={srcSetString}
       alt={alt}
       className={props.className ? props.className : undefined}
