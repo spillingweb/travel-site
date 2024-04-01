@@ -2,7 +2,7 @@
 
 const Navbar: React.FC = () => {
     return (
-        <nav>
+        <nav className="primary-nav primary-nav__pull-right">
           <ul>
             <li>
               <a href="#our-beginning">Our Beginning</a>

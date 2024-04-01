@@ -22,14 +22,14 @@ const OurBeginning: React.FC = () => {
         </Wrapper>
 
         <Row className="row--gutters">
-          <div className="row__medium-4 row__medium-4--larger row__b-margin-until-medium">
+          <div className="row__medium-4 row__b-margin-until-medium">
             <picture>
               <Source sourceArray={ourStartProps.source!} />
               <Image imgProps={ourStartProps} />
             </picture>
           </div>
 
-          <div className="row__medium-8 row__medium-8--smaller">
+          <div className="row__medium-8 row__medium-8">
             <div className="generic-content-container">
               <h2 className="headline headline--no-t-margin">
                 Here&rsquo;s how we got started&hellip;

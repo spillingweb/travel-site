@@ -16,9 +16,9 @@ import Wrapper from "./UI/Wrapper";
 const LargeHero: React.FC = () => {
   return (
     <div className="large-hero">
-      <picture>
+      <picture className="large-hero__image">
         <Source sourceArray={heroImgProps.source!} />
-        <Image imgProps={heroImgProps} className="large-hero__image" />
+        <Image imgProps={heroImgProps}/>
       </picture>
 
       <div className="large-hero__text-content">
