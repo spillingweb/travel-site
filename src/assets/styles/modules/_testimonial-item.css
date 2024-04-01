@@ -9,7 +9,11 @@
   }
 
   &--last {
-    margin-bottom: 0;
+    margin-bottom: 0px;
+
+    @mixin atMedium {
+      margin-bottom: 18px;
+    }
   }
 
   &__photo {
