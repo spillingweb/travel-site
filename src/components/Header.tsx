@@ -5,20 +5,23 @@ import Navbar from "./Navbar";
 import Button from "./UI/Button";
 import Wrapper from "./UI/Wrapper";
 
-const Header: React.FC = () => {
+const Header: React.FC<{visibleSection: string}> = ({visibleSection}) => {
   const [menuVisible, setMenuVisible] = useState(false);
+  const [dark, setDark] = useState(false);
 
   function handleToggleMenu() {
     setMenuVisible((prevState) => !prevState);
   }
 
-  let siteHeaderClasses = "site-header";
-  let menuIconClasses = "site-header__menu-icon"
+  let siteHeaderClasses = `site-header ${
+    dark === true ? "site-header--dark" : ""
+  }`;
+  let menuIconClasses = "site-header__menu-icon";
   let menuContentClasses = "site-header__menu-content";
 
   if (menuVisible) {
     siteHeaderClasses += " site-header--is-expanded";
-    menuIconClasses += " site-header__menu-icon--close-x"
+    menuIconClasses += " site-header__menu-icon--close-x";
     menuContentClasses += " site-header__menu-content--is-visible";
   }
 
@@ -38,11 +41,11 @@ const Header: React.FC = () => {
             <div className="site-header__btn-container">
               <Button>Get in Touch</Button>
             </div>
-            <Navbar />
+            <Navbar visibleSection={visibleSection} />
           </div>
         </Wrapper>
       </header>
-      <LargeHero />
+      <LargeHero onScrollChange={setDark} />
     </>
   );
 };

@@ -6,7 +6,7 @@ import Wrapper from "./UI/Wrapper";
 
 const OurBeginning: React.FC = () => {
   return (
-    <div id="our-beginning" className="page-section">
+    <section id="our-beginning" className="page-section">
       <Wrapper>
         <h2 className="headline headline--centered headline--light headline--b-margin-small">
           The first trip we planned<strong> was our own.</strong>
@@ -63,7 +63,7 @@ const OurBeginning: React.FC = () => {
           </div>
         </Row>
       </Wrapper>
-    </div>
+      </section>
   );
 };
 

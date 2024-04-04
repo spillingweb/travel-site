@@ -1,24 +1,35 @@
-import heroLarge from "../assets/images/hero--large.jpg";
-import heroLargeHiDpi from "../assets/images/hero--large-hi-dpi.jpg";
-import heroMedium from "../assets/images/hero--medium.jpg";
-import heroMediumHiDpi from "../assets/images/hero--medium-hi-dpi.jpg";
-import heroSmall from "../assets/images/hero--small.jpg";
-import heroSmallHiDpi from "../assets/images/hero--small-hi-dpi.jpg";
-import heroSmaller from "../assets/images/hero--smaller.jpg";
-import heroSmallerHiDpi from "../assets/images/hero--smaller-hi-dpi.jpg";
-
 import Button from "./UI/Button";
 import Source from "./UI/Source";
 import { heroImgProps } from "../images";
 import Image from "./UI/Image";
 import Wrapper from "./UI/Wrapper";
+import { useEffect, useRef, useState } from "react";
 
-const LargeHero: React.FC = () => {
+const LargeHero: React.FC<{ onScrollChange: Function }> = ({
+  onScrollChange,
+}) => {
+  const domRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const current = domRef.current;
+    if (!current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => onScrollChange(!entry.isIntersecting));
+      },
+      { threshold: 0.8 }
+    );
+    observer.observe(current);
+
+    return () => observer.unobserve(current);
+  }, []);
+
   return (
-    <div className="large-hero">
+    <div ref={domRef} className="large-hero">
       <picture className="large-hero__image">
         <Source sourceArray={heroImgProps.source!} />
-        <Image imgProps={heroImgProps}/>
+        <Image imgProps={heroImgProps} />
       </picture>
 
       <div className="large-hero__text-content">

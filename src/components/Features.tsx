@@ -5,7 +5,7 @@ import Row from "./UI/Row";
 
 const Features: React.FC = () => {
   return (
-    <div id="features" className="page-section page-section--blue">
+    <section id="features" className="page-section page-section--blue">
       <div className="wrapper">
         <h2 className="section-title">
           <img src={starImg} className="section-title__icon" />
@@ -18,7 +18,7 @@ const Features: React.FC = () => {
           ))}
         </Row>
       </div>
-    </div>
+    </section>
   );
 };
 
