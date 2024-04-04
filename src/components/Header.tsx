@@ -12,13 +12,13 @@ const Header: React.FC = () => {
     setMenuVisible((prevState) => !prevState);
   }
 
-  let menuIconClasses = "site-header__menu-icon"
   let siteHeaderClasses = "site-header";
+  let menuIconClasses = "site-header__menu-icon"
   let menuContentClasses = "site-header__menu-content";
 
   if (menuVisible) {
-    menuIconClasses += " site-header__menu-icon--close-x"
     siteHeaderClasses += " site-header--is-expanded";
+    menuIconClasses += " site-header__menu-icon--close-x"
     menuContentClasses += " site-header__menu-content--is-visible";
   }
 

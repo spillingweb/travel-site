@@ -13,26 +13,9 @@ const Features: React.FC = () => {
         </h2>
 
         <Row className="row--gutters-large generic-content-container">
-          <div className="row__medium-6">
-            <FeatureItem
-              key={DUMMY_FEATURES[0].id}
-              feature={DUMMY_FEATURES[0]}
-            />
-            <FeatureItem
-              key={DUMMY_FEATURES[1].id}
-              feature={DUMMY_FEATURES[1]}
-            />
-          </div>
-          <div className="row__medium-6">
-            <FeatureItem
-              key={DUMMY_FEATURES[2].id}
-              feature={DUMMY_FEATURES[2]}
-            />
-            <FeatureItem
-              key={DUMMY_FEATURES[3].id}
-              feature={DUMMY_FEATURES[3]}
-            />
-          </div>
+          {DUMMY_FEATURES.map((feature) => (
+            <FeatureItem key={feature.id} feature={feature} />
+          ))}
         </Row>
       </div>
     </div>
