@@ -3,10 +3,11 @@ import Source from "./UI/Source";
 import { heroImgProps } from "../images";
 import Image from "./UI/Image";
 import Wrapper from "./UI/Wrapper";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
-const LargeHero: React.FC<{ onScrollChange: Function }> = ({
+const LargeHero: React.FC<{ onScrollChange: Function; onBtnClick: React.MouseEventHandler<HTMLButtonElement> }> = ({
   onScrollChange,
+  onBtnClick
 }) => {
   const domRef = useRef<HTMLDivElement>(null);
 
@@ -40,7 +41,7 @@ const LargeHero: React.FC<{ onScrollChange: Function }> = ({
             We create soul restoring journeys that inspire you to be you.
           </p>
           <p>
-            <Button color="orange" size="large">
+            <Button onBtnClick={onBtnClick} color="orange" size="large">
               Get Started Today
             </Button>
           </p>

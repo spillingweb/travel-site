@@ -1,23 +1,24 @@
-// import { Link } from "react-router-dom";
+const Button: React.FC<{
+  children: any;
+  color?: string;
+  size?: string;
+  className?: string;
+  onBtnClick?: React.MouseEventHandler<HTMLButtonElement>;
+}> = ({ children, color, size, className, onBtnClick }) => {
+  let classes = `btn ${className ? className : ''}`;
 
-const Button: React.FC<{ children: any; color?: string; size?: string }> = (
-  props
-) => {
-  let classes = "btn";
-
-  if (props.color) {
-    classes += ` btn--${props.color}`;
+  if (color) {
+    classes += ` btn--${color}`;
   }
 
-  if (props.size) {
-    classes += ` btn--${props.size}`;
-
+  if (size) {
+    classes += ` btn--${size}`;
   }
 
   return (
-    <a href="#" className={classes}>
-      {props.children}
-    </a>
+    <button className={classes} onClick={onBtnClick ? onBtnClick : undefined}>
+      {children}
+    </button>
   );
 };
 

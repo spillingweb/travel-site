@@ -45,6 +45,10 @@
       &.active {
         color: #fabb69;
       }
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }

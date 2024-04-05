@@ -1,7 +1,9 @@
 import Button from "./UI/Button";
 import Wrapper from "./UI/Wrapper";
 
-const Footer: React.FC = () => {
+const Footer: React.FC<{
+  onBtnClick: React.MouseEventHandler<HTMLSpanElement>;
+}> = ({ onBtnClick }) => {
   return (
     <footer className="site-footer">
       <Wrapper>
@@ -9,7 +11,7 @@ const Footer: React.FC = () => {
           <span className="site-footer__text">
             Copyright &copy; 2019 Clear View Escapes. All rights reserved.{" "}
           </span>
-          <Button color="orange">Get in Touch</Button>
+            <Button onBtnClick={onBtnClick} color="orange">Get in Touch</Button>
         </p>
       </Wrapper>
     </footer>

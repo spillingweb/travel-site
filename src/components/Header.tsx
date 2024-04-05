@@ -1,11 +1,16 @@
 import { useState } from "react";
+
 import headerIcon from "../assets/images/icons/clear-view-escapes.svg";
 import LargeHero from "./LargeHero";
 import Navbar from "./Navbar";
 import Button from "./UI/Button";
 import Wrapper from "./UI/Wrapper";
 
-const Header: React.FC<{visibleSection: string}> = ({visibleSection}) => {
+const Header: React.FC<{
+  visibleSection: string;
+  onBtnClick: React.MouseEventHandler<HTMLButtonElement>;
+}> = ({ visibleSection, onBtnClick }) => {
+
   const [menuVisible, setMenuVisible] = useState(false);
   const [dark, setDark] = useState(false);
 
@@ -38,14 +43,14 @@ const Header: React.FC<{visibleSection: string}> = ({visibleSection}) => {
           </div>
 
           <div className={menuContentClasses}>
-            <div className="site-header__btn-container">
-              <Button>Get in Touch</Button>
+            <div className="site-header__btn-container" >
+              <Button onBtnClick={onBtnClick}>Get in Touch</Button>
             </div>
             <Navbar visibleSection={visibleSection} />
           </div>
         </Wrapper>
       </header>
-      <LargeHero onScrollChange={setDark} />
+      <LargeHero onScrollChange={setDark} onBtnClick={onBtnClick} />
     </>
   );
 };
