@@ -1,7 +1,7 @@
-import facebookIcon from "/src/assets/images/icons/facebook.svg";
-import twitterIcon from "/src/assets/images/icons/twitter.svg";
-import instagramIcon from "/src/assets/images/icons/instagram.svg";
-import youtubeIcon from "/src/assets/images/icons/youtube.svg";
+import facebookIcon from "./assets/images/icons/facebook.svg";
+import twitterIcon from "./assets/images/icons/twitter.svg";
+import instagramIcon from "./assets/images/icons/instagram.svg";
+import youtubeIcon from "./assets/images/icons/youtube.svg";
 
 export const soMeArray = [
   {

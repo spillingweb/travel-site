@@ -1,6 +1,4 @@
-import { useEffect } from "react";
-
-import mailIcon from "/src/assets/images/icons/mail.svg";
+import mailIcon from "../assets/images/icons/mail.svg";
 import Wrapper from "./UI/Wrapper";
 import Button from "./UI/Button";
 import { soMeArray } from "../social-media";
