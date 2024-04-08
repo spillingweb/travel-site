@@ -1,33 +1,14 @@
-import facebookIcon from "/src/assets/images/icons/facebook.svg";
-import twitterIcon from "/src/assets/images/icons/twitter.svg";
-import instagramIcon from "/src/assets/images/icons/instagram.svg";
-import youtubeIcon from "/src/assets/images/icons/youtube.svg";
+import { useEffect } from "react";
+
 import mailIcon from "/src/assets/images/icons/mail.svg";
 import Wrapper from "./UI/Wrapper";
 import Button from "./UI/Button";
+import { soMeArray } from "../social-media";
 
 const Modal: React.FC<{
   open: boolean;
   onCloseModal: React.ReactEventHandler<HTMLDivElement>;
 }> = ({ open, onCloseModal }) => {
-  const soMeArray = [
-    {
-      name: "Facebook",
-      icon: facebookIcon,
-    },
-    {
-      name: "Instagram",
-      icon: instagramIcon,
-    },
-    {
-      name: "Twitter",
-      icon: twitterIcon,
-    },
-    {
-      name: "YouTube",
-      icon: youtubeIcon,
-    },
-  ];
 
   return (
     <div className={`modal ${open ? "modal--is-visible" : ""}`}>
